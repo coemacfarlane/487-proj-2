@@ -1,0 +1,238 @@
+
+/* ------------------------
+        GLOBALS
+------------------------- */
+@font-face {
+    font-family: 'Streamster';
+    src: url('/content/streamster/Streamster.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --streamster: 'Streamster', serif;
+    --body: 'Montserrat', sans-serif;
+    --grey: #363636;
+    --purple: #8B24EB;
+    --teal: #90F9FF;
+    --rasberry: #F71374;
+}
+* {
+    font-family: var(--body);
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.color-rasberry {
+    color: var(--rasberry) !important;
+}
+
+.slider-container, .slider, .slide {
+    height: 100vh !important;
+}
+
+.img-cover {
+    width: 100%;
+}
+.img-cover img {
+    width: 100%;
+    height: auto;
+}
+.img-cover a {
+    width: 100%;
+    padding: 0;
+}
+
+cap p {
+    font-size: 0.8em !important;
+}
+
+.slide li {
+    padding-top: 1em;
+}
+
+/* SLIDER NAV ARROWS */
+.slide-nav i {
+    font-size: 4em;
+    color: white;
+    opacity: 0.5;
+    transition-duration: .4s;
+}
+.slide-nav i:hover {
+    opacity: 1;
+}
+/* SLIDER NAV BUTTONS */
+.slide-list li {
+    margin: 0 5px;
+}
+.slide-list li a {
+    border-radius: 0;
+    width: 10px;
+}
+.slide-list li.active a {
+    height: 30px;
+}
+
+/* SLIDER INNER BACKGROUNDS */
+.slide {
+    background-color: var(--teal);
+}
+
+.background-video {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+    z-index: 10;
+}
+.background-video video {
+    height: 100%;
+    width: 177.77777778vh; /* 100 * 16 / 9 */
+    min-width: 100%;
+    min-height: 56.25vw; /* 100 * 9 / 16 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* SLIDE CONTENT */
+.slide-content {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    line-height: 50px;
+    margin: 0 0 0 0;
+
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+
+    z-index: 99;
+    overflow-y: scroll;
+    overflow-x: visible;
+
+    height: 90%;
+    padding: 0;
+    padding-top: 20px;
+}
+.sl-1 .slide-content,
+.sl-5 .slide-content {
+    padding: 20px;
+    top:50%;
+    height: min-content;
+}
+
+/* SLIDE ONE */
+.sl-1 .slide-content {
+    overflow: visible;
+}
+.sl-1 h2 {
+    font-family: var(--streamster);
+    font-size: 4em;
+    color: var(--grey);
+}
+
+/* SLIDE TWO */
+.sl-2 {
+    background-image: linear-gradient(var(--teal), var(--rasberry));
+}
+.sl-2 .slide-content {
+    margin-top: 20px;
+    overflow: hidden;
+}
+.sl-2 h1 {
+    font-family: var(--streamster);
+    color: var(--rasberry);
+    text-align: left;
+}
+
+/* SLIDE THREE */
+.sl-3 {
+    background: radial-gradient(ellipse at center bottom, var(--teal) 0%, rgba(64,9,121,1) 86%);;
+}
+.sl-3 .slide-content {
+    overflow: visible;
+}
+
+.sl-3 h3, .sl-3 h5 {
+    font-weight: 400;
+}
+
+.sl-3 .slide-bg {
+    background-image: url('../content/pngfind-mountainbg.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    height: 100%;
+    width: 105%;
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+
+.sl-3 .card {
+    padding: 25px 15px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--grey);
+    z-index: 99;
+}
+.sl-3 .card p {
+    margin-bottom: 0;
+}
+.sl-3 p {
+    font-size: 0.8em;
+}
+
+/* SLIDE FOUR */
+.sl-4 {
+    background: linear-gradient(150deg, var(--teal), var(--purple));
+}
+
+.sl-4 .slide-content {
+    overflow-y: hidden;
+}
+
+.sl-4 h1 {
+    text-align: left;
+}
+.sl-4 h1:nth-child(2) {
+    font-family: var(--streamster);
+}
+
+.sl-4 h3 {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.sl-4 p {
+    font-size: 0.8em;
+}
+
+#browser-nav-bar {
+    transform: translateY(2px);
+}
+
+.sl-4 ul{
+    list-style-type: none;
+    padding: 1em;
+}
+.scroll-li {
+    overflow-y: scroll;
+    height: 75vh;
+    background-color: white;
+    color: var(--grey);
+}
+
+/* SLIDE FIVE */
+.sl-5 {
+    background-color: var(--purple);
+}
